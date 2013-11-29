@@ -1,0 +1,14 @@
+<apex:page showHeader="false" sidebar="false" standardController="Account" extensions="LogglyRecordsExtension">
+
+	<apex:pageBlock>
+		<apex:pageBlockTable value="{!MostRecentLogs}" var="item">
+			<apex:column value="{!item.TimeStamp}" headerValue="TimeStamp"/>
+			<apex:column value="{!item.Application}" headerValue="Application"/>
+			<apex:column value="{!item.Severity}" headerValue="Severity"/>
+			<apex:column value="{!item.Message}" headerValue="Message"/>
+			<apex:column value="{!item.UserId}" headerValue="User Id"/>
+		</apex:pageBlockTable>
+	</apex:pageBlock>
+	
+
+</apex:page>
